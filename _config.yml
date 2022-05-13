@@ -1,3 +1,65 @@
-markdown: redcarpet
-baseurl: /historia-economica-de-bolivia
-exclude: ["README.md", "othe-folder"]
+# Site
+name: 'Historia Económica de Bolivia'
+description: 'Webpage of Bolivian Economic History'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: '/historia-economica-de-bolivia'
+disqus: '#'
+email: 'nigel.caspa@gmail.com'
+mailchimp-list: '#'
+
+include: ["_pages"]
+permalink: /:title/
+
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  
+authors:
+    sal:
+      name:           Nigel
+      site:           https://nigelcaspa.wordpress.com
+      avatar:         /assets/images/avatar1.jpg
+      bio:            "Hi, I am Nigel, an author in this page"
+      email:          nigel.caspa@gmail.com
+      twitter:        https://twitter.com/nigel.caspa
+
+    jane:
+      name:           Jane
+      site:           https://www.wowthemes.net
+      avatar:         /assets/images/avatar2.jpg
+      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
+      email:          fakemail@gmail.com
+      twitter:        https://twitter.com/wowthemesnet
+ 
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: sal
+      avatar: /assets/images/avatar1.jpg
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      
+# Syntax
+markdown: kramdown
+highlighter: rouge
+
+# Paginate
+paginate: 10
+
+
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
