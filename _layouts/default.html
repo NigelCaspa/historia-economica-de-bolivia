@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia Económica de Bolivia</title>
+    <link rel="stylesheet" href="{{site.baseurl}}/css/common.css">
 </head>
 <body>
     <header>
         <h1>Historia Económica de Bolivia</h1>
-        <nav>
-            <ul><a href="{{site.baseurl}}/index.html">Home</a></ul>
-            <ul><a href="{{site.baseurl}}/news.html">News</a></ul>
-        </nav>
+        {% include nav.html %}
     </header>
 {{content}}
+    <footer>
+        {% include nav.html %}
+        <p>2022 Historia Económica de Bolivia, Rights reserved</p>    
+    </footer>
 </body>
 </html>

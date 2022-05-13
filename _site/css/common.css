@@ -1,0 +1,11 @@
+html {
+    margin: 5%;
+    padding: 5%;
+    font: normal 100%/1.4 Arial, Helvetica, sans-serif, 
+}
+
+.current{
+    background-color: gray;
+    color: white;
+    padding: 0.2%;
+}
