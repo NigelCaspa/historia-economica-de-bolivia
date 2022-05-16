@@ -1,0 +1,12 @@
+---
+layout: news
+---
+<h1>Opinion</h1>
+<ul>
+    {% for opinion in site.categories.opinion %}
+        <li>
+            <a href="{{site.baseurl}}{{opinion.url}}">{{opinion.title}}</a>
+            <p>{{opinion.meta}}</p>
+        </li>
+    {% endfor %}
+</ul>

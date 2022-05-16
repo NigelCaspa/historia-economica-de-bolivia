@@ -1,6 +1,12 @@
 ---
-layout: default
+layout: news
 ---
-
 <h1>Reviews</h1>
-<p>Esta es una línea de texto de prueba.</p>
+<ul>
+    {% for reviews in site.categories.reviews %}
+        <li>
+            <a href="{{site.baseurl}}{{reviews.url}}">{{reviews.title}}</a>
+            <p>{{reviews.meta}}</p>
+        </li>
+    {% endfor %}
+</ul>
