@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia Económica de Bolivia</title>
-    <link rel="stylesheet" href="{{site.baseurl}}/css/common.css">
-</head>
-<body>
-    <header>
-        <h1>Historia Económica de Bolivia</h1>
-        {% include nav.html navclass='nav-top' %}
-    </header>
-{{content}}
-    <footer>
-        {% include nav.html navclass='nav-bottom' %}
-        <p>2022 Historia Económica de Bolivia, Rights reserved</p>    
-    </footer>
-</body>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {% include search-lunr.html %}
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
 </html>

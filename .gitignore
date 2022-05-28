@@ -1,2 +1,5 @@
-
-_site/index.html
+.bundle
+.sass-cache
+Gemfile.lock
+_site
+*.gem
